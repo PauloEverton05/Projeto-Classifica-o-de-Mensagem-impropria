@@ -15,10 +15,6 @@ def exibir_menu():
     print("Digite o tipo de mensagem (elogio, reclamacao ou sair):")
     return input().lower()
 
-def obter_mensagem():
-    print("Digite a mensagem:")
-    return input()
-
 def main():
     while True:
         tipo = exibir_menu()
@@ -29,7 +25,7 @@ def main():
             print("Tente novamente.")
             continue
 
-        mensagem = obter_mensagem()
+        mensagem = mensagem = str(input("digite sua mensagem: "))
 
         if verificar_palavras_improprias(mensagem):
             registrar_mensagem("palavras_improprias", mensagem)
